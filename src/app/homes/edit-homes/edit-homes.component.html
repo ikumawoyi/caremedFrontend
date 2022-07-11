@@ -1,0 +1,48 @@
+
+<mat-card>
+    <mat-card-title>Update Home</mat-card-title>
+    <mat-card-content style="padding-top: 20px;">
+<div *ngIf="dataLoaded">
+<form [formGroup]="editHomeForm" (submit)="updateHome()">
+    <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Name" formControlName="name">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Address</mat-label>
+            <input matInput placeholder="Address" formControlName="address">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Phone Number</mat-label>
+            <input matInput placeholder="PhoneNumber" formControlName="phoneNumber">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" formControlName="email">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+    </p>
+    <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Contact Person</mat-label>
+            <input matInput placeholder="ContactPerson" formControlName="contactPerson">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+      </p>
+      <p>
+        <button mat-raised-button color="primary">Update Home</button>
+      </p>
+</form>
+</div>
+    </mat-card-content>
+</mat-card>

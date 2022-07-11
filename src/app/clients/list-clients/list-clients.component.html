@@ -1,0 +1,31 @@
+<h1 *ngIf="listClients">Displaying {{ listClients.length}} clients</h1>
+  <div class="list-homes">
+            <table id="customers">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Email</th>
+                    <th>Date Of Birth</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let client of listClients">
+                    <td>{{ client.id }}</td>
+                    <td>{{ client.name }}</td>
+                    <td>{{ client.address }}</td>
+                    <td>{{ client.email }}</td>
+                    <td>{{ client.dateOfBirth }}</td>
+                    <td><a class="action-link" [routerLink]="['/clients/edit', client.id]">Edit</a>
+                         | <a class="action-link" [routerLink]="['/clients/view', client.id]">View</a>
+                          | <a class="action-link" [routerLink]="['/clients/delete', client.id]">Delete</a>
+                           | <a class="action-link" [routerLink]="['/clients/medication', client.id]">Medication</a>
+                            | <a class="action-link" [routerLink]="['/clients/createmedication', client.id]">Create Medication</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+  

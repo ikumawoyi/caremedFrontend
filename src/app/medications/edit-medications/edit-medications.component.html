@@ -1,0 +1,28 @@
+
+<mat-card>
+    <mat-card-title>Administer medication</mat-card-title>
+    <mat-card-content style="padding-top: 20px;">
+<div *ngIf="dataLoaded">
+<form [formGroup]="editMedicationForm" (submit)="updateMedication()">
+    <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Name" formControlName="name">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Dose</mat-label>
+            <input matInput placeholder="Dose" formControlName="dose" type="number" >
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+    </p>
+      <p>
+        <button mat-raised-button color="primary" [disabled]="isTime">Give</button> |
+        <button mat-raised-button color="primary" disabled>Damaged</button>
+      </p>
+</form>
+</div>
+    </mat-card-content>
+</mat-card>

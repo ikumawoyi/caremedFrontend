@@ -1,0 +1,11 @@
+<mat-card class="home-details" *ngIf="homeDetails">
+<mat-card-title>
+    {{homeDetails.name}}
+</mat-card-title>
+<mat-card-content>
+    {{homeDetails.email}} <br>
+    {{homeDetails.address}}<br>
+    {{homeDetails.phoneNumber}}<br>
+    {{homeDetails.contactPerson}}
+</mat-card-content>
+</mat-card>

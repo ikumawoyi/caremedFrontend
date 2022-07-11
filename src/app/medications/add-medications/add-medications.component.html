@@ -1,0 +1,76 @@
+<mat-card>
+    <mat-card-title>Create New Medication</mat-card-title>
+    <mat-card-content>
+<form [formGroup]="addMedicationForm" (submit)="createMedication()">
+    <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Name" formControlName="name">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Duration</mat-label>
+            <input matInput placeholder="Duration" formControlName="duration">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Dose</mat-label>
+            <input matInput placeholder="Dose" formControlName="dose">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Form</mat-label>
+            <input matInput placeholder="Form" formControlName="form">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Manufacturer</mat-label>
+            <input matInput placeholder="Manufacturer" formControlName="manufacturer">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+    </p>
+
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Count Of Remainder</mat-label>
+            <input matInput placeholder="CountOfRemainder" formControlName="countOfRemainder">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+    </p><p>
+        <mat-form-field appearance="outline">
+            <mat-label>Count Of Supply</mat-label>
+            <input matInput placeholder="CountOfSupply" formControlName="countOfSupply">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" formControlName="email">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+    </p>
+    <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Strength</mat-label>
+            <input matInput placeholder="Strength" formControlName="strength">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+      </p>
+      <p>
+        <button mat-fab color="warn" [disabled]="!addMedicationForm" aria-label="Example icon button with a home icon">
+          <mat-icon>home</mat-icon> Create
+        </button>
+      </p>
+
+</form>
+</mat-card-content>
+</mat-card>
